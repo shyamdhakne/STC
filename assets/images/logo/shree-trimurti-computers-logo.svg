@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 96" role="img" aria-labelledby="stcLogoTitle">
+  <title id="stcLogoTitle">Shree Trimurti Computers</title>
+  <defs>
+    <linearGradient id="stcMark" x1="12" y1="8" x2="84" y2="88" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1E4FD8"/>
+      <stop offset="100%" stop-color="#0B1F4A"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="8" width="80" height="80" rx="18" fill="url(#stcMark)"/>
+  <rect x="26" y="26" width="36" height="26" rx="4" fill="none" stroke="#E8F0FF" stroke-width="2.6"/>
+  <rect x="36" y="54" width="16" height="3.2" rx="1.2" fill="#7EB6FF"/>
+  <rect x="32" y="58.5" width="24" height="2.4" rx="1.1" fill="#E8F0FF"/>
+  <circle cx="24" cy="22" r="3.2" fill="#7EB6FF"/>
+  <circle cx="72" cy="22" r="3.2" fill="#7EB6FF"/>
+  <circle cx="48" cy="76" r="3.2" fill="#7EB6FF"/>
+  <path d="M24 22 L36 34 M72 22 L60 34 M48 76 L48 54" fill="none" stroke="#7EB6FF" stroke-width="1.6" stroke-linecap="round"/>
+  <text x="104" y="48" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="28" font-weight="700" fill="#0B1F4A" letter-spacing="0.4">Shree Trimurti</text>
+  <text x="104" y="76" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="600" fill="#1E4FD8" letter-spacing="3.2">COMPUTERS</text>
+</svg>
