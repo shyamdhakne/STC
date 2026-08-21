@@ -82,6 +82,25 @@
         <p class="hero-lead">Computers, laptops, refurbished systems, servers, CCTV, Windows, software, networking, repairs, installation, and professional IT support.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" data-call href="tel:+919823031563">Call Now</a>
+		  <script>
+document.querySelector('[data-call]').addEventListener('click', function (e) {
+    const phone = '+919823031563';
+
+    // Desktop browsers generally don't have a phone handler.
+    // navigator.userAgentData.mobile is useful for detecting mobile devices.
+    const isMobile = navigator.userAgentData?.mobile ??
+        /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+
+    if (!isMobile) {
+        e.preventDefault();
+
+        // Show the number instead of trying to call
+        this.textContent = phone;
+        this.removeAttribute('href');
+        this.style.cursor = 'default';
+    }
+});
+</script>
           <a class="btn btn-whatsapp" data-whatsapp href="https://wa.me/919823031563" target="_blank" rel="noopener">WhatsApp</a>          
           <a class="btn btn-ghost" href="#services">Our Services</a>
         </div>
@@ -120,64 +139,56 @@
             <img src="assets/images/laptops/laptop-new.webp" alt="New laptop computer on a desk" width="640" height="400" loading="lazy">
             <div class="card-body">
               <h3>Laptops</h3>
-              <p>New and refurbished laptops for personal, educational, and business use.</p>
-              <a class="btn btn-outline" href="#enquiry" data-enquire="Laptops">Enquire</a>
+              <p>New and refurbished laptops for personal, educational, and business use.</p>              
             </div>
           </article>
           <article class="card">
             <img src="assets/images/desktops/desktop-computer.webp" alt="Desktop computer with monitor, keyboard, and tower" width="640" height="400" loading="lazy">
             <div class="card-body">
               <h3>Desktop Computers</h3>
-              <p>New and refurbished desktop systems for home, shop, and office work.</p>
-              <a class="btn btn-outline" href="#enquiry" data-enquire="Desktop Computers">Enquire</a>
+              <p>New and refurbished desktop systems for home, shop, and office work.</p>              
             </div>
           </article>
           <article class="card">
             <img src="assets/images/servers/server-rack.webp" alt="Server rack with networking cables in a data cabinet" width="640" height="400" loading="lazy">
             <div class="card-body">
               <h3>Servers</h3>
-              <p>Server hardware and server solutions for offices and businesses.</p>
-              <a class="btn btn-outline" href="#enquiry" data-enquire="Servers">Enquire</a>
+              <p>Server hardware and server solutions for offices and businesses.</p>              
             </div>
           </article>
           <article class="card">
             <img src="assets/images/cctv/cctv-camera.webp" alt="CCTV security camera mounted on a building" width="640" height="400" loading="lazy">
             <div class="card-body">
               <h3>CCTV</h3>
-              <p>CCTV cameras and surveillance systems for homes, shops, and offices.</p>
-              <a class="btn btn-outline" href="#enquiry" data-enquire="CCTV">Enquire</a>
+              <p>CCTV cameras and surveillance systems for homes, shops, and offices.</p>              
             </div>
           </article>
           <article class="card">
             <img src="assets/images/networking/networking.webp" alt="Network switch and patch cables in an IT rack" width="640" height="400" loading="lazy">
             <div class="card-body">
               <h3>Networking</h3>
-              <p>Networking equipment and IT infrastructure for connected workplaces.</p>
-              <a class="btn btn-outline" href="#enquiry" data-enquire="Networking">Enquire</a>
+              <p>Networking equipment and IT infrastructure for connected workplaces.</p>              
             </div>
           </article>
           <article class="card">
             <img src="assets/images/software/windows.webp" alt="Computer screen showing an operating system desktop" width="640" height="400" loading="lazy">
             <div class="card-body">
               <h3>Windows</h3>
-              <p>Windows operating systems and related setup and support.</p>
-              <a class="btn btn-outline" href="#enquiry" data-enquire="Windows">Enquire</a>
+              <p>Windows operating systems and related setup and support.</p>              
             </div>
           </article>
           <article class="card">
             <img src="assets/images/software/office-software.webp" alt="Laptop showing office productivity documents and spreadsheets" width="640" height="400" loading="lazy">
             <div class="card-body">
               <h3>Office Software</h3>
-              <p>Office productivity software with installation and support.</p>
-              <a class="btn btn-outline" href="#enquiry" data-enquire="Office Software">Enquire</a>
+              <p>Office productivity software with installation and support.</p>              
             </div>
           </article>
           <article class="card">
             <img src="assets/images/laptops/laptop-refurbished.webp" alt="Laptop with accessories on a work surface" width="640" height="400" loading="lazy">
             <div class="card-body">
               <h3>Computer Accessories</h3>
-              <p>Peripherals and accessories to complete a working computer setup.</p>
-              <a class="btn btn-outline" href="#enquiry" data-enquire="Computer Accessories">Enquire</a>
+              <p>Peripherals and accessories to complete a working computer setup.</p>              
             </div>
           </article>
         </div>
@@ -192,8 +203,7 @@
           <p>Customers can enquire about both new equipment and professionally refurbished computers, laptops, and servers. Refurbished options can be a cost-effective choice, with multiple configurations for offices and businesses.</p>
           <p>Where applicable, equipment is checked and serviced before it is offered, and technical support is available after purchase for the products and services we supply.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#products">View Products</a>
-            <a class="btn btn-outline" href="#enquiry" data-enquire="New and refurbished systems">Enquire Now</a>
+            <a class="btn btn-primary" href="#products">View Products</a>            
           </div>
         </div>
         <div class="pair-media">
@@ -251,8 +261,7 @@
             <li>CCTV installation and configuration</li>
             <li>DVR/NVR systems</li>
             <li>CCTV maintenance</li>
-          </ul>
-          <a class="btn btn-primary" href="#enquiry" data-enquire="CCTV quote">Get a CCTV Quote</a>
+          </ul>          
         </div>
         <div class="triple-media">
           <img src="assets/images/cctv/cctv-camera.webp" alt="Exterior CCTV camera" width="400" height="250" loading="lazy">
@@ -277,8 +286,7 @@
             <li>Storage solutions and networking</li>
             <li>Office IT setup and IT infrastructure</li>
             <li>Technical support</li>
-          </ul>
-          <a class="btn btn-primary" href="#enquiry" data-enquire="Business IT requirement">Discuss Your IT Requirement</a>
+          </ul>          
         </div>
       </div>
     </section>
@@ -334,8 +342,7 @@
         <p>Talk to Shree Trimurti Computers about your requirement.</p>
         <div class="hero-actions">
           <a class="btn btn-light" data-call href="tel:+919823031563">Call Now</a>
-          <a class="btn btn-whatsapp" data-whatsapp href="https://wa.me/919823031563" target="_blank" rel="noopener">WhatsApp</a>
-          <a class="btn btn-primary" href="#enquiry">Get a Quote</a>
+          <a class="btn btn-whatsapp" data-whatsapp href="https://wa.me/919823031563" target="_blank" rel="noopener">WhatsApp</a>          
         </div>
       </div>
     </section>
@@ -350,7 +357,7 @@
           <div>
             <address class="contact-card">
               <p><strong>Office Address</strong><br>N-2 Shop No.6, Darshan Plaza, Near Lokvikas Bank, Cidco, Aurangabad, Maharashtra, 431003</p>
-              <p><strong>Mobile</strong><br><a href="tel:+919823031563">+91-9823031563</a></p>
+              <p><strong>Mobile</strong><br><a href="tel:+919823031563">+91-9823031563 / +91-9371783966 / +91-7397859839</a></p>			  
               <p><strong>WhatsApp</strong><br><a href="https://wa.me/919823031563" target="_blank" rel="noopener">+91-9823031563</a></p>
               <p><strong>Email</strong><br><a href="mailto:shreetrimurti_computers@rediffmail.com">shreetrimurti_computers@rediffmail.com</a></p>
               <p><strong>Business Hours</strong><br>9:00 AM to 7:00 PM</p>
@@ -365,6 +372,107 @@
               <iframe title="Map of Shree Trimurti Computers office in Cidco, Aurangabad" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Darshan%20Plaza%20Cidco%20Aurangabad%20Maharashtra%20431003&amp;z=16&amp;output=embed"></iframe>
             </div>
           </div>
+		  <div class="image-slider" id="image-slider">
+		  <div class="slides">
+			<div class="slide active">
+			  <img src="assets/images/office/office_front.jpeg" alt="Office">
+			</div>
+
+			<div class="slide">
+			  <img src="assets/images/office/accessories.jpeg" alt="Desktop computers">
+			</div>
+
+			<div class="slide">
+			  <img src="assets/images/office/stack.jpeg" alt="CCTV and networking">
+			</div>
+
+			<div class="slide">
+			  <img src="assets/images/office/stack1.jpeg" alt="Computer accessories">
+			</div>
+			<div class="slide">
+			  <img src="assets/images/office/stack2.jpeg" alt="Computer accessories">
+			</div>
+		  </div>
+
+		  <button class="slider-btn prev" type="button" aria-label="Previous image">
+			&#10094;
+		  </button>
+
+		  <button class="slider-btn next" type="button" aria-label="Next image">
+			&#10095;
+		  </button>
+
+	  <div class="slider-dots">
+		<button class="dot active" type="button" aria-label="Slide 1"></button>
+		<button class="dot" type="button" aria-label="Slide 2"></button>
+		<button class="dot" type="button" aria-label="Slide 3"></button>
+		<button class="dot" type="button" aria-label="Slide 4"></button>
+		<button class="dot" type="button" aria-label="Slide 5"></button>
+	  </div>
+	</div>
+	<script>
+	document.addEventListener('DOMContentLoaded', function () {
+
+	  const slides = document.querySelectorAll('#image-slider .slide');
+	  const dots = document.querySelectorAll('#image-slider .dot');
+	  const prevBtn = document.querySelector('#image-slider .slider-btn.prev');
+	  const nextBtn = document.querySelector('#image-slider .slider-btn.next');
+
+	  // Stop if slider does not exist
+	  if (!slides.length || !prevBtn || !nextBtn) {
+		return;
+	  }
+
+	  let currentSlide = 0;
+	  let sliderTimer;
+
+	  function showSlide(index) {
+		currentSlide = (index + slides.length) % slides.length;
+
+		slides.forEach((slide, i) => {
+		  slide.classList.toggle('active', i === currentSlide);
+		});
+
+		dots.forEach((dot, i) => {
+		  dot.classList.toggle('active', i === currentSlide);
+		});
+	  }
+
+	  function nextSlide() {
+		showSlide(currentSlide + 1);
+	  }
+
+	  function prevSlide() {
+		showSlide(currentSlide - 1);
+	  }
+
+	  nextBtn.addEventListener('click', function () {
+		nextSlide();
+		startSlider();
+	  });
+
+	  prevBtn.addEventListener('click', function () {
+		prevSlide();
+		startSlider();
+	  });
+
+	  dots.forEach((dot, index) => {
+		dot.addEventListener('click', function () {
+		  showSlide(index);
+		  startSlider();
+		});
+	  });
+
+	  function startSlider() {
+		clearInterval(sliderTimer);
+		sliderTimer = setInterval(nextSlide, 4000);
+	  }
+
+	  showSlide(0);
+	  startSlider();
+
+	});
+	</script>
 <!--
           <form class="enquiry-form" id="enquiry" novalidate>
             <h3>Enquiry</h3>
